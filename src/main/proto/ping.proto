@@ -1,0 +1,24 @@
+syntax = "proto3";
+package vn.com.cardoctor.driver;
+import "google/protobuf/wrappers.proto";
+option java_multiple_files = true;
+option java_package = "com.ac.grpcserver.grpc";
+option java_outer_classname = "PingGrpcService";
+
+service PingService{
+  rpc ping(PingRequest)returns (PingResponse);
+}
+
+
+message PingRequest{
+  string message = 1;
+}
+message PingResponse{
+  int32 code = 1;
+  PingData data = 2;
+
+}
+message PingData{
+  string ip = 1;
+  google.protobuf.StringValue message = 2;
+}
