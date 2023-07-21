@@ -1,0 +1,5 @@
+docker build -t grpc/server:1.0 .
+
+docker tag grpc/server:1.0 registry.aggregatoricapaci.com/cardoctor/grpc-server:1.0
+
+docker push registry.aggregatoricapaci.com/cardoctor/grpc-server:1.0
